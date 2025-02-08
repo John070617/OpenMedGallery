@@ -1,0 +1,13 @@
+{
+  "name": "openmedgallery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "tinycolor2": "^1.6.0",
+    "regenerator-runtime": "^0.14.1"
+  },
+  "scripts": {
+    "build": "echo 'Please use WeChat DevTools to build npm'"
+  }
+}
