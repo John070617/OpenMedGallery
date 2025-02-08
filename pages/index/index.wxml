@@ -1,0 +1,43 @@
+<nav-bar title="OpenMedGallery" showBack="{{false}}" />
+<view class="container" style="margin-top: {{88 + statusBarHeight}}px">
+  <!-- 搜索栏 -->
+  <search-bar 
+    placeholder="搜索医学图片" 
+    bind:search="onSearch"
+  />
+
+  <!-- 瀑布流布局 -->
+  <view class="waterfall">
+    <!-- 左列 -->
+    <view class="column">
+      <block wx:for="{{leftImages}}" wx:key="id">
+        <image-card 
+          image="{{item}}"
+          bind:tap="onImageTap"
+          bind:like="onLikeTap"
+          bind:download="onDownloadTap"
+          data-id="{{item.id}}"
+        />
+      </block>
+    </view>
+
+    <!-- 右列 -->
+    <view class="column">
+      <block wx:for="{{rightImages}}" wx:key="id">
+        <image-card 
+          image="{{item}}"
+          bind:tap="onImageTap"
+          bind:like="onLikeTap"
+          bind:download="onDownloadTap"
+          data-id="{{item.id}}"
+        />
+      </block>
+    </view>
+  </view>
+</view>
+
+<canvas 
+  type="2d" 
+  id="colorCanvas" 
+  style="width: 200px; height: 200px; position: absolute; left: -9999px;"
+></canvas> 

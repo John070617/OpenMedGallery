@@ -1,0 +1,40 @@
+.container {
+  padding: 30rpx;
+}
+
+.auth-form {
+  background: #fff;
+  padding: 30rpx;
+  border-radius: 12rpx;
+}
+
+.auth-form input {
+  border: 1rpx solid #ddd;
+  padding: 20rpx;
+  border-radius: 8rpx;
+  margin-bottom: 20rpx;
+}
+
+.menu-list {
+  background: #fff;
+  border-radius: 12rpx;
+  margin-bottom: 30rpx;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 20rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.arrow {
+  color: #999;
+}
+
+/* ... 其他样式 */

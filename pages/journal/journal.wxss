@@ -1,0 +1,93 @@
+.container {
+  padding: 20rpx;
+}
+
+.add-journal {
+  background: #fff;
+  padding: 30rpx;
+  border-radius: 12rpx;
+  margin-bottom: 30rpx;
+}
+
+.form-item {
+  margin-bottom: 20rpx;
+}
+
+.input {
+  background: #f5f5f5;
+  padding: 20rpx;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+}
+
+.add-btn {
+  background: #1296db;
+  color: #fff;
+  border-radius: 8rpx;
+  margin-top: 30rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin: 40rpx 0 20rpx;
+}
+
+.journal-list {
+  background: #fff;
+  border-radius: 12rpx;
+  padding: 20rpx;
+  margin-bottom: 30rpx;
+}
+
+.empty-tip {
+  text-align: center;
+  color: #999;
+  padding: 40rpx 0;
+  font-size: 28rpx;
+}
+
+.recommended-journals {
+  background: #fff;
+  border-radius: 12rpx;
+  padding: 20rpx;
+}
+
+.recommended-item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.journal-icon {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+}
+
+.journal-info {
+  flex: 1;
+}
+
+.journal-name {
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-bottom: 8rpx;
+}
+
+.journal-desc {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.add-icon {
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 56rpx;
+  text-align: center;
+  border: 2rpx solid #1296db;
+  border-radius: 30rpx;
+  color: #1296db;
+  font-size: 40rpx;
+} 

@@ -1,0 +1,48 @@
+.color-palette {
+  padding: 20rpx;
+  background: #fff;
+  border-radius: 12rpx;
+  margin: 20rpx;
+}
+
+.color-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.color-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20rpx;
+}
+
+.color-item {
+  display: flex;
+  align-items: center;
+  gap: 10rpx;
+}
+
+.color-block {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 8rpx;
+  border: 1px solid #eee;
+}
+
+.color-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.error-message {
+  color: #ff4d4f;
+  font-size: 28rpx;
+  padding: 20rpx;
+  text-align: center;
+  background: #fff2f0;
+  border-radius: 8rpx;
+  margin: 20rpx 0;
+} 

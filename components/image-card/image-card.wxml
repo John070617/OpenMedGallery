@@ -1,0 +1,24 @@
+<view class="image-card" bindtap="onTap">
+  <view class="card-image-container">
+    <image class="card-image" src="{{image.url}}" mode="aspectFill" />
+  </view>
+  <view class="card-info">
+    <view class="title">{{image.title}}</view>
+    <view class="journal">{{image.journal}} ({{image.year}}) {{image.volume}}({{image.issue}}):{{image.pages}}</view>
+    <view class="card-footer">
+      <view class="color-dots">
+        <view wx:for="{{sortedColors}}" wx:key="index" 
+          style="width: 20rpx; height: 20rpx; border-radius: 50%; border: 1rpx solid rgba(0, 0, 0, 0.1); background-color: {{item.hex}};">
+        </view>
+      </view>
+      <view class="actions">
+        <view class="action" catchtap="onLikeClick">
+          <image class="action-icon" src="/icon/{{image.isLiked ? 'like1' : 'like0'}}.svg" mode="aspectFit"></image>
+        </view>
+        <view class="action" catchtap="onDownloadClick">
+          <image class="action-icon" src="/icon/download.svg" mode="aspectFit"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view> 

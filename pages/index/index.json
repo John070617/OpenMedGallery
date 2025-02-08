@@ -1,0 +1,14 @@
+{
+  "navigationStyle": "custom",
+  "componentFramework": "glass-easel",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "backgroundColor": "#f8f8f8",
+  "onReachBottomDistance": 300,
+  "disableScroll": false,
+  "usingComponents": {
+    "nav-bar": "/components/nav-bar/nav-bar",
+    "search-bar": "/components/search-bar/search-bar",
+    "image-card": "/components/image-card/image-card"
+  }
+} 

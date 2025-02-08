@@ -1,0 +1,14 @@
+<view class="journal-item">
+  <view class="journal-info">
+    <view class="journal-name">{{journal.name}}</view>
+    <view class="journal-url">{{journal.url}}</view>
+  </view>
+  <view class="actions">
+    <switch 
+      checked="{{journal.enabled}}" 
+      bindchange="onToggle"
+      color="#1296db"
+    />
+    <view class="delete-btn" bindtap="onDelete">删除</view>
+  </view>
+</view> 

@@ -1,0 +1,6 @@
+.color-block {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 8rpx;
+  border: 2rpx solid rgba(0, 0, 0, 0.1);
+} 

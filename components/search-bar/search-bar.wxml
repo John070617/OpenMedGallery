@@ -1,0 +1,7 @@
+<view class="search-bar">
+  <input 
+    class="search-input" 
+    placeholder="{{placeholder}}"
+    bindinput="onInput"
+  />
+</view> 

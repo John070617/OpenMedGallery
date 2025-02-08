@@ -1,0 +1,17 @@
+<!-- 添加一个隐藏的canvas -->
+<canvas type="2d" id="colorCanvas" style="width: 100px; height: 100px; position: absolute; left: -9999px;"></canvas>
+
+<view class="color-palette">
+  <view class="color-title">配色方案</view>
+  <view wx:if="{{errorMsg}}" class="error-message">{{errorMsg}}</view>
+  <view class="color-list" wx:else>
+    <view class="color-item" wx:for="{{imageColors}}" wx:key="hex">
+      <view class="color-block" style="background-color: {{item.hex}}"></view>
+      <view class="color-info">
+        <text>HEX: {{item.hex}}</text>
+        <text>RGB: {{item.rgb}}</text>
+        <text>CMYK: C{{item.cmyk.c}} M{{item.cmyk.m}} Y{{item.cmyk.y}} K{{item.cmyk.k}}</text>
+      </view>
+    </view>
+  </view>
+</view> 

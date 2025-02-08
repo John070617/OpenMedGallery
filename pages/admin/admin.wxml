@@ -1,0 +1,39 @@
+<view class="container">
+  <!-- 管理员验证 -->
+  <block wx:if="{{!isAdmin}}">
+    <view class="auth-form">
+      <input 
+        type="password" 
+        placeholder="请输入管理员密码"
+        password
+        bindinput="onPasswordInput"
+      />
+      <button bindtap="verifyAdmin">验证</button>
+    </view>
+  </block>
+
+  <block wx:else>
+    <!-- 功能菜单 -->
+    <view class="menu-list">
+      <view class="menu-item" bindtap="showSection" data-section="legal">
+        <text>法律文件管理</text>
+        <text class="arrow">></text>
+      </view>
+      <view class="menu-item" bindtap="showSection" data-section="announcement">
+        <text>公告管理</text>
+        <text class="arrow">></text>
+      </view>
+      <view class="menu-item" bindtap="showSection" data-section="resource">
+        <text>资源管理</text>
+        <text class="arrow">></text>
+      </view>
+      <view class="menu-item" bindtap="showSection" data-section="statistics">
+        <text>数据统计</text>
+        <text class="arrow">></text>
+      </view>
+    </view>
+
+    <!-- 各个功能区块 -->
+    <!-- ... 其他内容 -->
+  </block>
+</view>

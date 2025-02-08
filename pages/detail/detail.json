@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "图片详情",
+  "navigationStyle": "custom",
+  "componentFramework": "glass-easel",
+  "usingComponents": {
+    "nav-bar": "/components/nav-bar/nav-bar",
+    "color-block": "/components/color-block/color-block"
+  }
+} 

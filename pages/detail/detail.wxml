@@ -1,0 +1,84 @@
+<view class="page">
+  <canvas type="2d" id="colorCanvas" style="width: 200px; height: 200px; position: absolute; left: -9999px;"></canvas>
+  <canvas canvas-id="compressCanvas" style="position: fixed; left: -9999px; width: 100%; height: 100%;"></canvas>
+  <scroll-view scroll-y class="container">
+    <view class="safe-area"></view>
+    <view class="image-section">
+      <image 
+        class="main-image" 
+        src="{{image.url}}" 
+        mode="widthFix"
+        lazy-load="true"
+        bindtap="previewImage"
+        show-menu-by-longpress="{{true}}"
+        data-url="{{image.url}}"
+        menu-item-list="{{['发送给朋友', '保存图片', '收藏']}}"
+      />
+    </view>
+
+    <view class="info-section">
+      <view class="title">{{image.title}}</view>
+      <view class="meta">
+        <view class="journal">{{journalName}}. {{year}}, {{volume}}({{issue}}): {{page}}</view>
+        <view class="doi" bindtap="copyDOI">DOI: {{image.doi}}</view>
+      </view>
+
+      <view class="section">
+        <view class="section-title">配色方案</view>
+        <view class="colors">
+          <view class="color-item {{item.isPlaceholder ? 'placeholder' : ''}}" wx:for="{{image.colors}}" wx:key="index" bindtap="onColorTap" data-color="{{item}}" data-index="{{index}}">
+            <view class="color-block {{item.isPlaceholder ? 'placeholder' : ''}}" style="background-color: {{item.hex}}"></view>
+            <view class="color-value">{{item.hex || '-'}}</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="section">
+        <view class="section-title">关键词</view>
+        <view class="keywords">
+          <text class="keyword" wx:for="{{image.keywords}}" wx:key="index">{{item}}</text>
+        </view>
+      </view>
+
+      <view class="section">
+        <view class="section-title">引用格式 <text class="copy-hint" bindtap="copyCitation">点击复制</text></view>
+        <view class="citation">{{citation}}</view>
+      </view>
+
+      <text class="description">{{description}}</text>
+    </view>
+  </scroll-view>
+
+  <view class="action-bar">
+    <button class="action-btn" bindtap="onLike">
+      <image class="action-icon" src="/icon/{{image.isLiked ? 'like1' : 'like0'}}.svg" mode="aspectFit"></image>
+      <text>{{image.isLiked ? '已收藏' : '收藏'}}</text>
+    </button>
+    <button class="action-btn" bindtap="onDownload">
+      <image class="action-icon" src="/icon/download.svg" mode="aspectFit"></image>
+      <text>下载</text>
+    </button>
+    <button class="action-btn" bindtap="onShare">
+      <image class="action-icon" src="/icon/share.svg" mode="aspectFit"></image>
+      <text>分享</text>
+    </button>
+  </view>
+</view>
+
+<style>
+.image-section {
+  width: 100%;
+  background: #f8f8f8;
+  margin: 0;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.main-image {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+</style> 
